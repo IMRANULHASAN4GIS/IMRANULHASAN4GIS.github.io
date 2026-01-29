@@ -1,132 +1,602 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Imran Ul Hasan | GIS Consultant</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Imran Ul Hasan — GIS Consultant</title>
+  <meta name="description" content="Imran Ul Hasan — GIS Consultant (Asset Management, QA/QC, Automation). 20+ years delivering GIS solutions across UAE and Pakistan." />
+  <meta name="author" content="Imran Ul Hasan" />
 
-<style>
-body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background: #0f172a;
-    color: #e2e8f0;
-}
+  <!-- Open Graph -->
+  <meta property="og:title" content="Imran Ul Hasan — GIS Consultant" />
+  <meta property="og:description" content="Asset Management • QA/QC • GIS Automation • Enterprise GIS" />
+  <meta property="og:type" content="website" />
+  <!-- Optional (after you upload): <meta property="og:image" content="https://YOURDOMAIN/assets/profile.jpg" /> -->
 
-header {
-    background: linear-gradient(135deg, #2563eb, #1e40af);
-    padding: 60px 20px;
-    text-align: center;
-}
+  <style>
+    :root{
+      --bg0:#070A12;
+      --bg1:#0B1020;
+      --card: rgba(255,255,255,.06);
+      --card2: rgba(255,255,255,.08);
+      --text:#E9ECF5;
+      --muted:#A8B0C4;
+      --line: rgba(255,255,255,.10);
+      --brand:#6AE4FF;
+      --brand2:#8C7CFF;
+      --ok:#64F3B2;
+      --shadow: 0 18px 60px rgba(0,0,0,.45);
+      --radius: 18px;
+      --radius2: 26px;
+      --max: 1100px;
+    }
 
-header h1 {
-    font-size: 40px;
-    margin: 0;
-}
+    *{ box-sizing:border-box; }
+    html,body{ margin:0; padding:0; }
+    body{
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      color: var(--text);
+      background:
+        radial-gradient(1200px 600px at 20% -10%, rgba(106,228,255,.18), transparent 60%),
+        radial-gradient(900px 500px at 90% 10%, rgba(140,124,255,.16), transparent 55%),
+        radial-gradient(900px 650px at 50% 110%, rgba(100,243,178,.10), transparent 60%),
+        linear-gradient(180deg, var(--bg0), var(--bg1));
+      line-height: 1.5;
+      overflow-x:hidden;
+    }
 
-header p {
-    font-size: 18px;
-    opacity: 0.9;
-}
+    a{ color:inherit; text-decoration:none; }
+    .wrap{ max-width: var(--max); margin:0 auto; padding: 0 18px; }
 
-section {
-    max-width: 1000px;
-    margin: auto;
-    padding: 40px 20px;
-}
+    /* Top nav */
+    .topbar{
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(12px);
+      background: rgba(7,10,18,.55);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      padding: 14px 0;
+      gap: 14px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:12px;
+      font-weight: 750;
+      letter-spacing:.2px;
+    }
+    .dot{
+      width:12px; height:12px; border-radius:99px;
+      background: linear-gradient(135deg, var(--brand), var(--brand2));
+      box-shadow: 0 0 0 6px rgba(106,228,255,.10);
+    }
+    .navlinks{ display:flex; gap: 14px; flex-wrap:wrap; align-items:center; }
+    .navlinks a{
+      padding: 8px 10px;
+      border-radius: 999px;
+      color: var(--muted);
+      border: 1px solid transparent;
+    }
+    .navlinks a:hover{
+      color: var(--text);
+      border-color: var(--line);
+      background: rgba(255,255,255,.04);
+    }
+    .cta{
+      display:flex; gap:10px; align-items:center;
+    }
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      gap:10px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.04);
+      color: var(--text);
+      font-weight: 650;
+    }
+    .btn:hover{ background: rgba(255,255,255,.07); }
+    .btn.primary{
+      border-color: transparent;
+      background: linear-gradient(135deg, rgba(106,228,255,.18), rgba(140,124,255,.18));
+      box-shadow: 0 10px 30px rgba(106,228,255,.10);
+    }
+    .btn.primary:hover{
+      box-shadow: 0 14px 40px rgba(140,124,255,.14);
+    }
 
-.card {
-    background: #1e293b;
-    padding: 25px;
-    border-radius: 16px;
-    margin-bottom: 25px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-}
+    /* Hero */
+    header.hero{
+      padding: 40px 0 24px;
+    }
+    .hero-grid{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 18px;
+      align-items: stretch;
+    }
+    .panel{
+      border-radius: var(--radius2);
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    .hero-left{
+      padding: 26px;
+      position:relative;
+    }
+    .glow{
+      position:absolute; inset:-2px;
+      pointer-events:none;
+      background:
+        radial-gradient(700px 220px at 10% 0%, rgba(106,228,255,.14), transparent 60%),
+        radial-gradient(600px 220px at 85% 20%, rgba(140,124,255,.12), transparent 55%);
+      opacity:.9;
+    }
+    .kicker{
+      display:inline-flex;
+      gap:10px;
+      align-items:center;
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.04);
+      color: var(--muted);
+      font-weight: 650;
+      position: relative;
+      z-index: 1;
+    }
+    .k-badge{
+      width:10px; height:10px; border-radius:99px;
+      background: var(--ok);
+      box-shadow: 0 0 0 6px rgba(100,243,178,.10);
+    }
+    h1{
+      margin: 14px 0 10px;
+      font-size: clamp(32px, 4.2vw, 48px);
+      line-height: 1.08;
+      letter-spacing: -0.6px;
+      position: relative;
+      z-index: 1;
+    }
+    .subtitle{
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-size: 16px;
+      position: relative;
+      z-index: 1;
+      max-width: 62ch;
+    }
+    .chips{
+      display:flex; flex-wrap:wrap; gap:10px;
+      margin: 14px 0 18px;
+      position: relative;
+      z-index: 1;
+    }
+    .chip{
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.04);
+      color: var(--text);
+      font-weight: 600;
+      font-size: 13px;
+    }
+    .hero-actions{
+      display:flex; gap:10px; flex-wrap:wrap;
+      position: relative;
+      z-index: 1;
+    }
 
-h2 {
-    color: #38bdf8;
-}
+    /* Right card (photo) */
+    .hero-right{
+      padding: 22px;
+      display:flex;
+      flex-direction:column;
+      gap: 14px;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+    }
+    .avatar{
+      width: 160px; height: 160px;
+      border-radius: 999px;
+      overflow:hidden;
+      border: 1px solid var(--line);
+      box-shadow: 0 18px 50px rgba(0,0,0,.35);
+      background: rgba(255,255,255,.03);
+    }
+    .avatar img{
+      width:100%; height:100%;
+      object-fit: cover;
+      object-position: 50% 18%;
+      display:block;
+      transform: scale(1.02);
+    }
+    .hero-right .name{
+      font-weight: 800;
+      font-size: 18px;
+      letter-spacing: .2px;
+      margin-top: 2px;
+    }
+    .hero-right .role{
+      color: var(--muted);
+      font-weight: 650;
+      font-size: 14px;
+    }
+    .mini{
+      width:100%;
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 6px;
+    }
+    .stat{
+      padding: 12px;
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.04);
+      text-align:left;
+    }
+    .stat .v{
+      font-weight: 850;
+      font-size: 18px;
+      margin-bottom: 2px;
+    }
+    .stat .l{
+      color: var(--muted);
+      font-weight: 650;
+      font-size: 12px;
+    }
 
-ul {
-    padding-left: 20px;
-}
+    /* Sections */
+    section{
+      padding: 18px 0;
+    }
+    .grid-3{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+    .grid-2{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .card{
+      border-radius: var(--radius2);
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.04);
+      padding: 18px;
+    }
+    .card h3{
+      margin: 0 0 8px;
+      font-size: 16px;
+      letter-spacing: -.2px;
+    }
+    .card p{
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .section-title{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap: 14px;
+      margin: 10px 0 12px;
+    }
+    .section-title h2{
+      margin:0;
+      font-size: 20px;
+      letter-spacing: -.3px;
+    }
+    .section-title .hint{
+      color: var(--muted);
+      font-weight: 650;
+      font-size: 13px;
+    }
 
-footer {
-    text-align: center;
-    padding: 30px;
-    background: #020617;
-    color: #64748b;
-}
-</style>
+    /* Lists */
+    .list{
+      display:flex; flex-direction:column; gap:10px;
+      margin-top: 10px;
+    }
+    .item{
+      padding: 12px;
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.03);
+    }
+    .item .t{
+      font-weight: 750;
+      margin-bottom: 4px;
+    }
+    .item .d{
+      color: var(--muted);
+      font-size: 13px;
+      margin: 0;
+    }
+
+    /* Footer */
+    footer{
+      padding: 24px 0 40px;
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+      margin-top: 12px;
+    }
+    .footer-row{
+      display:flex; justify-content:space-between; gap: 12px;
+      flex-wrap:wrap;
+      align-items:center;
+    }
+    .fine{
+      font-size: 12px;
+    }
+
+    /* Responsive */
+    @media (max-width: 920px){
+      .hero-grid{ grid-template-columns: 1fr; }
+      .grid-3{ grid-template-columns: 1fr; }
+      .grid-2{ grid-template-columns: 1fr; }
+      .mini{ grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 420px){
+      .mini{ grid-template-columns: 1fr; }
+    }
+  </style>
+
+  <!-- Optional: simple JSON-LD for better SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Imran Ul Hasan",
+    "jobTitle": "GIS Consultant",
+    "knowsAbout": ["GIS", "Asset Management", "QA/QC", "Automation", "ArcGIS", "Enterprise GIS", "Data Governance"],
+    "url": "https://IMRANULHASAN4GIS.github.io/"
+  }
+  </script>
 </head>
 
 <body>
+  <div class="topbar">
+    <div class="wrap">
+      <div class="nav">
+        <div class="brand">
+          <span class="dot"></span>
+          <span>Imran Ul Hasan</span>
+        </div>
 
-<header>
-    <h1>Imran Ul Hasan</h1>
-    <p>GIS Consultant | GIS Engineer | Spatial Data & Asset Management Specialist</p>
-</header>
+        <div class="navlinks" aria-label="Primary navigation">
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
 
-<section>
+        <div class="cta">
+          <!-- Replace # with your real links -->
+          <a class="btn" href="#contact">Let’s Talk</a>
+          <a class="btn primary" href="#" title="Add your LinkedIn URL">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </div>
 
-<div class="card">
-<h2>About Me</h2>
-<p>
-Highly experienced GIS professional with over 20 years of expertise in GIS systems, spatial data management, 
-asset intelligence, QA/QC automation, geodatabase architecture, and municipal data standards. 
-Currently working with AACM (UAE) on large-scale infrastructure and municipal GIS programs.
-</p>
-</div>
+  <header class="hero">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div class="panel hero-left">
+          <div class="glow"></div>
+          <div class="kicker">
+            <span class="k-badge"></span>
+            Available for consulting • UAE / GCC / Remote
+          </div>
 
-<div class="card">
-<h2>Core Skills</h2>
-<ul>
-<li>ArcGIS Pro, ArcMap, ArcPy Automation</li>
-<li>Python Development for GIS Tools</li>
-<li>Geodatabase Design (Enterprise & File GDB)</li>
-<li>Data QA/QC, Validation Frameworks</li>
-<li>LRS (Linear Referencing Systems)</li>
-<li>Spatial Analysis & Data Modeling</li>
-<li>Web GIS & GIS Dashboards</li>
-<li>FME, SQL, ETL Pipelines</li>
-</ul>
-</div>
+          <h1>GIS Consultant delivering enterprise-grade solutions for asset & infrastructure data.</h1>
 
-<div class="card">
-<h2>Professional Experience</h2>
-<ul>
-<li><strong>GIS Engineer – AACM (UAE)</strong> – Municipal infrastructure, QA/QC automation, UDM templates</li>
-<li><strong>Manager GIS – K-Electric Pakistan</strong> – Utility GIS, ArcFM systems, asset modeling</li>
-<li><strong>Senior GIS Specialist – Fugro</strong> – Remote sensing, photogrammetry, enterprise GIS</li>
-</ul>
-</div>
+          <p class="subtitle">
+            I help organizations build reliable GIS ecosystems — from data models and QA/QC frameworks to automation,
+            dashboards, and migration programs. 20+ years of delivery across UAE and Pakistan with strong focus on
+            municipal assets, utilities, and spatial data governance.
+          </p>
 
-<div class="card">
-<h2>Projects & Expertise</h2>
-<ul>
-<li>Municipal GIS Data Migration & Validation</li>
-<li>Custom Python GIS Tools Development</li>
-<li>Automated QAQC Reporting Systems</li>
-<li>Asset Management for Utilities & Roads</li>
-<li>Enterprise GIS Standards & Templates</li>
-</ul>
-</div>
+          <div class="chips">
+            <span class="chip">Asset Management</span>
+            <span class="chip">QA/QC & Data Validation</span>
+            <span class="chip">GIS Automation (Python)</span>
+            <span class="chip">ArcGIS Pro / Enterprise</span>
+            <span class="chip">Data Migration & Templates</span>
+          </div>
 
-<div class="card">
-<h2>Contact</h2>
-<p>
-📧 Email: imranulhasan.ai@gmail.com<br>
-📧 Alternate: imraanulhasan@yahoo.com<br>
-🌐 GitHub: https://github.com/IMRANULH
-</p>
-</div>
+          <div class="hero-actions">
+            <a class="btn primary" href="#contact">Request a Consultation</a>
+            <a class="btn" href="#projects">View Selected Work</a>
+          </div>
+        </div>
 
-</section>
+        <div class="panel hero-right">
+          <div class="avatar">
+            <!-- IMPORTANT: upload your photo as assets/profile.jpg -->
+            <img src="assets/profile.jpg" alt="Imran Ul Hasan headshot" />
+          </div>
 
-<footer>
-© 2026 Imran Ul Hasan — GIS Consultant
-</footer>
+          <div class="name">Imran Ul Hasan</div>
+          <div class="role">GIS Consultant • Asset & Infrastructure</div>
 
+          <div class="mini">
+            <div class="stat">
+              <div class="v">20+ yrs</div>
+              <div class="l">GIS delivery & leadership</div>
+            </div>
+            <div class="stat">
+              <div class="v">50+ scripts</div>
+              <div class="l">Automation & QA/QC tooling</div>
+            </div>
+          </div>
+
+          <a class="btn" href="#contact" style="width:100%; justify-content:center;">Email / WhatsApp (Add Link)</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="about">
+      <div class="wrap">
+        <div class="section-title">
+          <h2>About</h2>
+          <div class="hint">Consulting mindset • Delivery discipline • Long-term maintainability</div>
+        </div>
+
+        <div class="grid-2">
+          <div class="card">
+            <h3>What I do</h3>
+            <p>
+              I design and implement GIS solutions that are robust, auditable, and scalable — especially for municipal
+              asset programs and infrastructure networks. My work typically includes template alignment, schema validation,
+              automated QA/QC, spatial rule checks, reporting, and end-to-end data migration support.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>How I work</h3>
+            <p>
+              Clear scope, measurable quality gates, and production-ready automation. I focus on minimizing rework by
+              defining standards early (data model, domains, topology rules, naming, deliverables), then enforcing them
+              through repeatable tools and dashboards.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="wrap">
+        <div class="section-title">
+          <h2>Services</h2>
+          <div class="hint">From quick audits to enterprise programs</div>
+        </div>
+
+        <div class="grid-3">
+          <div class="card">
+            <h3>GIS QA/QC Frameworks</h3>
+            <p>Schema checks, domain validation, attribute rules, topology-style spatial checks, and consolidated reporting.</p>
+          </div>
+          <div class="card">
+            <h3>Automation & Tooling</h3>
+            <p>Python-based GIS tools (ArcGIS Pro / open-source), batch processing, logs, Excel reporting, and GUI workflows.</p>
+          </div>
+          <div class="card">
+            <h3>Data Migration & Governance</h3>
+            <p>Template alignment, staging, mapping, acceptance criteria, issue tracking, and production release support.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="wrap">
+        <div class="section-title">
+          <h2>Experience Snapshot</h2>
+          <div class="hint">Replace placeholders with exact dates if you want</div>
+        </div>
+
+        <div class="list">
+          <div class="item">
+            <div class="t">GIS Engineer — AACM (UAE)</div>
+            <p class="d">Municipal asset data, QA/QC programs, GIS template compliance, automated validation tools, reporting and stakeholder coordination.</p>
+          </div>
+          <div class="item">
+            <div class="t">Manager GIS — K-Electric (Pakistan)</div>
+            <p class="d">Enterprise GIS operations, project management, network data quality, team leadership, and operational automation.</p>
+          </div>
+          <div class="item">
+            <div class="t">Senior GIS Specialist — Fugro (Pakistan / UAE)</div>
+            <p class="d">Survey/imagery workflows, mapping production, spatial analysis, and delivery for large infrastructure and government programs.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="wrap">
+        <div class="section-title">
+          <h2>Selected Work</h2>
+          <div class="hint">You can convert these into real case studies later</div>
+        </div>
+
+        <div class="grid-2">
+          <div class="card">
+            <h3>Municipal Asset QA/QC Tooling</h3>
+            <p>
+              Automated checks across multiple geodatabases, consolidated Excel reporting, issue summaries, and repeatable
+              validation pipelines for template compliance.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Spatial Join & Attribute Automation</h3>
+            <p>
+              High-volume attribute updates using controlled spatial matching rules, clean field management, and robust
+              logging — optimized for production workflows.
+            </p>
+          </div>
+          <div class="card">
+            <h3>PCI Reporting & Maintenance Decision Support</h3>
+            <p>
+              Lane-based PCI reporting, standardized templates, and maintenance decision logic while preserving strict
+              reporting layouts and auditability.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Enterprise Data Migration Support</h3>
+            <p>
+              Standards, acceptance criteria, mapping, and iterative QC cycles across stakeholders — minimizing rework and
+              accelerating approvals.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap">
+        <div class="section-title">
+          <h2>Contact</h2>
+          <div class="hint">Add your email + LinkedIn links</div>
+        </div>
+
+        <div class="card">
+          <p style="margin:0; color: var(--muted);">
+            For consulting, audits, automation builds, or enterprise GIS support:
+          </p>
+          <div class="chips" style="margin-top:12px;">
+            <!-- Replace with real links -->
+            <a class="chip" href="mailto:your-email@example.com">Email: your-email@example.com</a>
+            <a class="chip" href="#">LinkedIn: add-your-link</a>
+            <a class="chip" href="#">Portfolio / Case Studies</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="wrap">
+        <div class="footer-row">
+          <div class="brand"><span class="dot"></span><span>Imran Ul Hasan</span></div>
+          <div class="fine">© <span id="y"></span> • GIS Consultant • Built on GitHub Pages</div>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
